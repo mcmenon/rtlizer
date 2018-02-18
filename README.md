@@ -57,11 +57,14 @@ HARDWARE:
 Usage
 -----
 
-On the beaglebone, see `~/rtlizer/start.sh`. If you set `fake_data` to true, it will
+On the beaglebone:
+- `cd ~/rtlizer`
+- `./start.sh`
+Note: edit this file, if you set `fake_data` to true, it will
 send random numbers, and if `false`, it will send a spectrum analysis.
 
 On skywalker,:
-- `cd ~/rtlizer`.
+- `cd ~/rtlizer`
 - `./shockwave_proxy.sh`.
 
 On the ground station:
