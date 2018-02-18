@@ -29,7 +29,8 @@ SOFTWARE:
         netmask 255.255.255.0
         
 On the quad:
-- Set IP that talks to the beaglebone to be 192.168.0.4
+- `cd /etc/systemd/network`
+- edit lidar.network and set IP that talks to the beaglebone (where the LIAR is normally) to be 192.168.0.4
 - `sudo apt install socat`
 - Run `ifconfig` on each to verify that the microhard radio is `enp0s20f0u5u3`
 - From home directory, `git clone https://github.com/shield-ai/rtlizer.git`
