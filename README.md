@@ -60,6 +60,10 @@ Usage
 On the beaglebone, see `~/rtlizer/start.sh`. If you set `fake_data` to true, it will
 send random numbers, and if `false`, it will send a spectrum analysis.
 
-On skywalker, run `shockwave_proxy.sh`.
+On skywalker,:
+- `cd ~/rtlizer`.
+- `./shockwave_proxy.sh`.
 
-On the ground station, run `fake_ground_station` or `real_ground_station`, espective of the value of `fake_data` on the beaglebone.
+On the ground station:
+- `cd ~/rtlizer`.
+- `./fake_ground_station` (or run `real_ground_station` if that's what you selected on the BBB
