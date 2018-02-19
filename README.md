@@ -68,5 +68,4 @@ On skywalker,:
 - `./shockwave_proxy.sh`.
 
 On the ground station:
-- `cd ~/rtlizer`.
-- `./fake_ground_station` (or run `real_ground_station` if that's what you selected on the BBB
+- `socat TCP4:<robot>:8888 -`
