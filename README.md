@@ -32,8 +32,6 @@ On the quad:
 - `cd /etc/systemd/network`
 - edit lidar.network and set IP that talks to the beaglebone (where the LIAR is normally) to be 192.168.0.4
 - `sudo apt install socat`
-- Run `ifconfig` on each to verify that the microhard radio is `enp0s20f0u5u3`
-- From home directory, `git clone https://github.com/shield-ai/rtlizer.git`
 
 On the ground station:
 - `sudo apt install libgtk-3-dev`
@@ -43,7 +41,6 @@ On the ground station:
 - `cd rtlizer/client`
 - `make`
 - `cd ..`
-- Edit fake_ground_station to set the device to the network device through which your ground station is connected to wave relay (perhaps `eth0` or `enp3s0` or `wlan0` or `wlp2s0`)
 - `./fake_ground_station`
 
 
@@ -57,15 +54,10 @@ HARDWARE:
 Usage
 -----
 
-On the beaglebone:
-- `cd ~/rtlizer`
-- `./start.sh`
-Note: edit this file, if you set `fake_data` to true, it will
-send random numbers, and if `false`, it will send a spectrum analysis.
+On the beaglebone: do nothing, this should start automatically
 
 On skywalker,:
-- `cd ~/rtlizer`
-- `./shockwave_proxy.sh`.
+- `socat UDP4-RECV:5555 TCP4-LISTEN:8888`
 
 On the ground station:
 - `socat TCP4:<robot>:8888 -`
